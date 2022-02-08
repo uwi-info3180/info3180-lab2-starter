@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="maingrid">
+    <div class="topgrid">
+        <image id="img" src="{{ url_for('static', filename = 'images/avatar.png')}}" alt="img">
+        <h2>Ronae Johnson</h2>
+        <p>@RJ</p>
+        <p>Kingston, Jamaica</p>
+        <p>Joined January, 2018</p>
+        
+    </div>
+    <div  class="bottomgrid">
+        <p class="describe">I am smart and talented young man who loves website design and development.
+            Contact me if you'd like to work together on a new project.
+        </p>
+        <div class="number"> 
+            <p>7</p>
+            <p>100</p>
+            <p>250</p>
+        </div>
+        <div class="category">
+            <p>Posts</p>
+            <p>Following</p>
+            <p>Followers</p>
+           
+        </div>
+        <div class="btn">
+            <button>Follow</button>
+        </div>
+        
+    </div>
+
+    
+</div>
+
+
+{% endblock %}
