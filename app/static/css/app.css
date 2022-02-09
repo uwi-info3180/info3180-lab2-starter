@@ -64,6 +64,8 @@ body {
     margin-top: -10px;
     margin-bottom: -10px;
     gap: 45px;
+    font-weight: 400;
+    opacity: 80%;
 }
 
 .number p{
@@ -84,10 +86,13 @@ body {
 .describe{
     font-size: 18px;
     text-align: center;
+    font-weight: 400;
+    opacity: 80%;
 }
 
 .number p:nth-child(2){
     margin-left: 10px;
+
 }
 
 
