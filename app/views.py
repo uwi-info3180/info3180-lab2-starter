@@ -13,7 +13,7 @@ format='%B, %Y'
 date = date_joined.strftime(format)
 
 ###
-# Routing for your application.
+# Routing for your application
 ###
 
 def format_date_joined(date):
