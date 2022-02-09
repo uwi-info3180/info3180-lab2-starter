@@ -4,14 +4,20 @@ Jinja2 Documentation:    https://jinja.palletsprojects.com/
 Werkzeug Documentation:  https://werkzeug.palletsprojects.com/
 This file creates your application.
 """
-
 from app import app
 from flask import render_template, request, redirect, url_for, flash
+import datetime
 
+date_joined = datetime.date(2022, 2, 9)# today's date
+format='%B, %Y'
+date = date_joined.strftime(format)
 
 ###
 # Routing for your application.
 ###
+
+def format_date_joined(date):
+    return date
 
 @app.route('/')
 def home():
@@ -27,7 +33,9 @@ def about():
 @app.route('/profile')
 def profile():
     """Render website's home page."""
-    return render_template('profile.html')
+    return render_template('profile.html', jdate = format_date_joined(date))
+
+
 
 
 ###

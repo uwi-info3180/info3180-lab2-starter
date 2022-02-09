@@ -83,7 +83,23 @@ body {
 }
 .describe{
     font-size: 18px;
+    text-align: center;
 }
+
+.number p:nth-child(2){
+    margin-left: 10px;
+}
+
+
+.center p{
+    padding-left: 10px;
+}
+
+.number{
+    padding-right: 2px;
+}
+
+
 
 
 button{
