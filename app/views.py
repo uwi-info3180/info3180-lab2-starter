@@ -1,10 +1,31 @@
 from app import app
 from flask import render_template, request, redirect, url_for, flash
+import datetime
 
 
 ###
 # Routing for your application.
 ###
+
+@app.route('/profile')
+def profile():
+    profile_info = {
+        "full_name": "Your Name",
+        "username": "yourusername",
+        "location": "Your Location",
+        "date_joined": format_date_joined(datetime.date(2019, 2, 7)),  # Example date
+        "bio": "This is a short bio about me.",
+        "num_posts": 10,
+        "num_followers": 100,
+        "num_following": 50,
+        "profile_image": "profile.jpg"  # Ensure this image is in the 'static' folder
+    }
+
+    return render_template("profile.html", profile=profile_info)
+
+def format_date_joined(date):
+    """Format the join date as 'Month, Year'."""
+    return date.strftime("%B, %Y")  # Example: "February, 2019"
 
 @app.route('/')
 def home():
