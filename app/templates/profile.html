@@ -1,34 +1,39 @@
 {% extends "base.html" %}
 
 {% block main %}
-<div class="profile-container">
-  <div class="profile-header">
+<div class="profile-header">
     <div class="profile-image">
-      <img src="{{ url_for('static', filename='images/abishua.jpg') }}" alt="Profile Image" class="img-fluid rounded-circle">
+        <img src="{{ url_for('static', filename='images/abishua.jpg') }}" alt="Profile Image">
     </div>
-    <div class="profile-info">
-      <h2>{{ name }}</h2>
-      <p class="username">@{{ username }}</p>
-      <p class="location"><i class="bi bi-geo-alt-fill"></i> {{ location }}</p>
-      <p class="date-joined">Joined {{ date_joined }}</p>
-      <p class="bio">{{ bio }}</p>
-      <div class="profile-stats">
-        <div class="stat">
-          <span class="stat-value">{{ posts }}</span>
-          <span class="stat-label">Posts</span>
-        </div>
-        <div class="stat">
-          <span class="stat-value">{{ followers }}</span>
-          <span class="stat-label">Followers</span>
-        </div>
-        <div class="stat">
-          <span class="stat-value">{{ following }}</span>
-          <span class="stat-label">Following</span>
-        </div>
-      </div>
-      <button class="btn btn-success follow-btn">Follow</button>
+    <h1>{{ name }}</h1>
+    <p class="username">@{{ username }}</p>
+    <p class="location"><i class="bi bi-geo-alt-fill"></i> {{ location }}</p>
+    <p class="date-joined">Joined {{ date_joined }}</p>
+</div>
+
+<div class="profile-content">
+    <div class="bio">
+        {{ bio }}
     </div>
-  </div>
+
+    <div class="profile-stats">
+        <div class="stat">
+            <div class="stat-value">{{ posts }}</div>
+            <div class="stat-label">Posts</div>
+        </div>
+        <div class="stat">
+            <div class="stat-value">{{ followers }}</div>
+            <div class="stat-label">Followers</div>
+        </div>
+        <div class="stat">
+            <div class="stat-value">{{ following }}</div>
+            <div class="stat-label">Following</div>
+        </div>
+    </div>
+
+    <div class="follow-btn-container">
+        <button class="follow-btn">Follow</button>
+    </div>
 </div>
 {% endblock %}
 

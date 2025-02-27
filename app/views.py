@@ -27,7 +27,7 @@ def profile():
                           username="abishua",
                           name="Abishua Johnson",
                           location="Kingston, Jamaica",
-                          bio="Computer Science student with a passion for web development and AI. I love building things that live on the internet :)",
+                          bio="Computer Science student with a passion for web development and AI.",
                           posts=15,
                           followers=175000,
                           following=1)
