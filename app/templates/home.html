@@ -1,7 +1,14 @@
 {% extends "base.html" %}
 
 {% block main %}
-<h1>Flask Starter Code</h1>
-<p class="lead">Use this starter template for your Flask apps as a way to quickly start any new project.<br>
-All you get are these files and mostly barebones HTML/CSS files.</p>
+<div class="text-center mt-5">
+  <h1>Welcome to INFO3180 Lab 2</h1>
+  <p class="lead">This is a quick introduction to Flask</p>
+  
+  <div class="profile-preview mt-4">
+    <img src="{{ url_for('static', filename='images/abishua.jpg') }}" alt="Profile Photo" class="img-fluid rounded-circle mb-3" style="max-width: 200px;">
+    <p>Check out my profile page to learn more about me!</p>
+    <a href="{{ url_for('profile') }}" class="btn btn-success">View Profile</a>
+  </div>
+</div>
 {% endblock %}
