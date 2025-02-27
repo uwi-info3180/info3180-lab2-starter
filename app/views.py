@@ -25,7 +25,7 @@ def profile():
     return render_template('profile.html', 
                           date_joined=formatted_date,
                           username="abishua",
-                          name="Johnson",
+                          name="Abishua Johnson",
                           location="Kingston, Jamaica",
                           bio="Computer Science student with a passion for web development and AI. I love building things that live on the internet :)",
                           posts=15,
