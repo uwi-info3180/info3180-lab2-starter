@@ -1,64 +1,96 @@
-body {
-    padding-top: 5rem;
-}
+/* Profile Container */
 .profile-container {
-    text-align: center;
-    max-width: 500px;
-    margin: auto;
-    padding: 20px;
-    background: #f9f9f9;
+    width: 350px;
+    margin: 40px auto;
+    background: white;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
 }
 
+/* Green Header Background */
+.profile-header {
+    background: linear-gradient(135deg, #3ca55c, #b5ac49);
+    padding: 40px 0;
+    position: relative;
+}
+
+/* Profile Image */
 .profile-img {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    border: 3px solid #ddd;
-    margin-bottom: 10px;
+    border: 3px solid white;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.profile-header h1 {
-    font-size: 24px;
-    margin: 5px 0;
+/* Profile Info */
+.profile-info {
+    padding-top: 80px;
+    padding-bottom: 10px;
 }
 
-.profile-header h3 {
+.profile-name {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.profile-username {
     color: gray;
-    margin: 5px 0;
+    font-size: 16px;
+    margin-bottom: 5px;
 }
 
-.location, .joined-date, .bio {
+.profile-location,
+.profile-joined {
+    font-size: 14px;
     color: #666;
-    margin: 5px 0;
+    margin-bottom: 5px;
 }
 
+/* Bio */
+.profile-bio {
+    font-size: 14px;
+    padding: 10px 20px;
+    color: #333;
+}
+
+/* Stats */
 .profile-stats {
     display: flex;
     justify-content: space-around;
-    margin-top: 20px;
+    margin: 15px 0;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
 }
 
-.profile-stats div {
+.stat {
     text-align: center;
 }
 
-.profile-stats strong {
-    font-size: 18px;
+.stat strong {
     display: block;
+    font-size: 18px;
+    color: black;
 }
 
+/* Follow Button */
 .follow-btn {
-    background: #007bff;
+    background: #5cb85c;
     color: white;
-    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 20px;
     cursor: pointer;
-    margin-top: 20px;
+    margin-bottom: 15px;
 }
 
 .follow-btn:hover {
-    background: #0056b3;
+    background: #4cae4c;
 }
