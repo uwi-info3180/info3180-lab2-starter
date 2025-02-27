@@ -10,15 +10,15 @@ import datetime
 @app.route('/profile')
 def profile():
     profile_info = {
-        "full_name": "Your Name",
-        "username": "yourusername",
-        "location": "Your Location",
-        "date_joined": format_date_joined(datetime.date(2019, 2, 7)),  # Example date
-        "bio": "This is a short bio about me.",
+        "full_name": "Zara Campbell",
+        "username": "zara_christina",
+        "location": "Kingston, Jamaica",
+        "date_joined": format_date_joined(datetime.date(2025, 2, 1)),  # Example date
+        "bio": "I am a young and passionate computing student with a love for helping others and making a difference. Reach out to me to do collabs.",
         "num_posts": 10,
-        "num_followers": 100,
-        "num_following": 50,
-        "profile_image": "profile.jpg"  # Ensure this image is in the 'static' folder
+        "num_followers": 1032,
+        "num_following": 700,
+        "profile_image": "profile.jpeg"  # Ensure this image is in the 'static' folder
     }
 
     return render_template("profile.html", profile=profile_info)
