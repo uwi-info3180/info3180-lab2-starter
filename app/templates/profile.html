@@ -2,30 +2,43 @@
 
 {% block main %}
 <div class="profile-container">
+    <!-- Header with green background -->
     <div class="profile-header">
         <img src="{{ url_for('static', filename=profile.profile_image) }}" alt="Profile Picture" class="profile-img">
-        <h1>{{ profile.full_name }}</h1>
-        <h3>@{{ profile.username }}</h3>
-        <p class="location">{{ profile.location }}</p>
-        <p class="joined-date">Joined {{ profile.date_joined }}</p>
-        <p class="bio">{{ profile.bio }}</p>
     </div>
 
+    <!-- Profile Info -->
+    <div class="profile-info">
+        <h1 class="profile-name">{{ profile.full_name }}</h1>
+        <h3 class="profile-username">@{{ profile.username }}</h3>
+        <p class="profile-location">{{ profile.location }}</p>
+        <p class="profile-joined">Joined {{ profile.date_joined }}</p>
+    </div>
+
+    <!-- Bio -->
+    <div class="profile-bio">
+        <p>{{ profile.bio }}</p>
+    </div>
+
+    <!-- Stats -->
     <div class="profile-stats">
-        <div>
+        <div class="stat">
             <strong>{{ profile.num_posts }}</strong>
-            <p>Posts</p>
+            <span>Posts</span>
         </div>
-        <div>
-            <strong>{{ profile.num_followers }}</strong>
-            <p>Followers</p>
-        </div>
-        <div>
+        <div class="stat">
             <strong>{{ profile.num_following }}</strong>
-            <p>Following</p>
+            <span>Following</span>
+        </div>
+        <div class="stat">
+            <strong>{{ profile.num_followers }}</strong>
+            <span>Followers</span>
         </div>
     </div>
 
-    <button class="follow-btn">Follow</button>
+    <!-- Follow Button -->
+    <div class="profile-action">
+        <button class="follow-btn">Follow</button>
+    </div>
 </div>
 {% endblock %}
